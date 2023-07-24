@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from os import getenv
+from dotenv import load_dotenv
 from pathlib import Path
 import logging.config
 
@@ -33,6 +34,7 @@ SECRET_KEY = getenv(
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
+load_dotenv()
 DEBUG = getenv("DJANGO_DEBUG", "0") == "1"
 
 ALLOWED_HOSTS = [
@@ -166,6 +168,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'

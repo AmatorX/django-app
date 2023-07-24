@@ -13,6 +13,7 @@ django-debug-toolbar = "^4.1.0"
 django-filter = "^23.2"
 gunicorn = "^21.2.0"
 pillow = "^10.0.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
